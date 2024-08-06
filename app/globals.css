@@ -2,32 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.nav-item:hover {
+  color: rgb(19, 199, 205);
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+.nav-item {
+  display: none;
+  font-size: 0.875rem;
+  /* md:text-xs */
+}
+
+.button-download {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-item {
+    display: block;
+  }
+
+  .button-download {
+    display: block;
+    padding: 3px;
+  }
+
+  .btn-read{
+    padding: 0 25px 0 25px;
+    width: 156px;
+    height: 56px;
+    font-size: 1.25rem;
+    
+  }
+
+  .btn-contact{
+    padding: 0 25px 0 25px;
+    width: 156px;
+    height: 56px;
+    font-size: 1.25rem;
+  }
+
+  
+}
+
+@media (min-width: 1024px) {
+  .nav-item {
+    font-size: 0.875rem;
+    /* lg:text-sm */
+  }
+
+  .button-download {
+    padding: 5px;
+  }
+
+  .btn-read{
+    margin-left: 10px;
+  }
+
+  .btn-contact{
+    margin-right: 10px;
+  }
+
+  .lastest__slide {
+    flex: 0 0 33.3333333% !important;
+    min-width: 0 !important;
+    padding: 0 12px 0 12px !important;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (min-width: 1280px) {
+  .nav-item {
+    font-size: 1rem;
+    /* xl:text-base */
+  }
+
+  .button-download {
+    padding: 8px 16px;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.mainheader{
+  position: sticky;
+  top: 0;
+}
+
+.btn-contact{
+  background-color: white;
+  color: #007fed;
+  padding: 0 25px 0 25px;
+  border-radius: 5px;
+  border: white solid 2px;
+  width: 156px;
+  height: 56px;
+  font-size: 1rem;
+  
+}
+
+.btn-contact:hover{
+  background-color: #007fed;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-read{
+  background-color: #007fed;
+  color: white;
+  padding: 0 25px 0 25px;
+  border-radius: 5px;
+  border: white solid 2px;
+  width: 156px;
+  height: 56px;
+  font-size: 1rem;
+}
+
+.btn-read:hover{
+  background-color: white;
+  color: #007fed;
+  cursor: pointer;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.lastest__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 10px 0 10px;
 }
